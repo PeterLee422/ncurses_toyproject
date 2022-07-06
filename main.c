@@ -11,11 +11,15 @@ extern treePointer root;
 
 int main(void) {
 	char cmdline[MAXLINE];
+	pid_t pid;
 
 	if ((pid = Fork()) == 0) {		/* Child */
-		
-	}
 
+	}
+	while (1) {
+
+		Fgets(cmdline, MAXLINE, stdin);
+	}
 
 	return 0;
 }
